@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hubungi Zippy Tour Service via WhatsApp, Telegram, atau form kontak. Konsultasi gratis open trip gunung.">
+  <title>Kontak — Zippy Tour Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .glass { background: rgba(15,23,42,0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(249,115,22,0.15); }
+    .card-glass { background: rgba(30,41,59,0.65); backdrop-filter: blur(12px); border: 1px solid rgba(249,115,22,0.12); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    .card-glass:hover { transform: translateY(-5px); border-color: rgba(249,115,22,0.45); box-shadow: 0 20px 40px rgba(249,115,22,0.1); }
+    .btn-primary { background: linear-gradient(135deg, #f97316, #fb923c); transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,115,22,0.4); }
+    .stat-num { background: linear-gradient(135deg, #f97316, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-link-item { position: relative; }
+    .nav-link-item::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #f97316; transition: width 0.3s ease; }
+    .nav-link-item:hover::after, .nav-link-item.active::after { width: 100%; }
+    .section-tag { background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3); color: #fb923c; }
+    .page-hero { background: linear-gradient(to bottom, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.78) 60%, rgba(15,23,42,1) 100%), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80') center/cover no-repeat; }
+    .input-field { background: rgba(30,41,59,0.5); border: 1px solid rgba(100,116,139,0.4); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+    .input-field:focus { outline: none; border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.15); }
+    .contact-card:hover .contact-icon { transform: scale(1.1); }
+    .contact-icon { transition: transform 0.3s ease; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+    .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+  <!-- NAVBAR -->
+<nav class="glass fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <a href="/" class="flex items-center gap-2">
+        <img src="../assets/logo.png" alt="Zippy Tour Logo" class="h-9 w-auto object-contain">
+        <span class="font-bold text-lg tracking-tight">Zippy<span class="text-orange-400">Tour</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Beranda</a>
+        <a href="/paket" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Paket Trip</a>
+        <a href="/contact" class="nav-link-item active text-sm font-medium text-orange-400">Kontak</a>
+        <a href="/kupon" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Kupon</a>
+      </div>
+        <div class="hidden md:flex">
+          <a href="/paket" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white shadow-lg">Lihat Paket</a>
+        </div>
+        <button id="hamburger" class="md:hidden text-slate-300" aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden px-4 pb-4 pt-2 border-t border-slate-700/50">
+      <div class="flex flex-col gap-3">
+        <a href="/" class="text-sm font-medium text-slate-300 py-2">Beranda</a>
+        <a href="/paket" class="text-sm font-medium text-slate-300 py-2">Paket Trip</a>
+        <a href="/contact" class="text-sm font-medium text-orange-400 py-2">Kontak</a>
+        <a href="/kupon" class="text-sm font-medium text-slate-300 py-2">Kupon</a>
+        <a href="/paket" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white text-center mt-2">Lihat Paket</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero pt-28 pb-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="section-tag text-xs font-semibold px-4 py-1.5 rounded-full inline-block mb-5">💬 Hubungi Kami</span>
+      <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">Ada Pertanyaan?<br><span class="stat-num">Kami Siap Membantu.</span></h1>
+      <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto">Konsultasi gratis seputar jadwal trip, paket, dan pendaftaran. Respon cepat dalam hitungan menit.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section class="bg-slate-900 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- LEFT: Contact Form -->
+        <div class="card-glass rounded-2xl p-8 animate-on-scroll">
+          <h2 class="text-2xl font-bold mb-2">Kirim Pesan</h2>
+          <p class="text-slate-400 text-sm mb-8">Isi form di bawah dan kami akan segera menghubungimu.</p>
+          <form onsubmit="handleSubmit(event)" class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2" for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" placeholder="Masukkan nama lengkapmu" required
+                class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-slate-500 text-sm">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2" for="email">Email</label>
+              <input type="email" id="email" placeholder="email@kamu.com" required
+                class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-slate-500 text-sm">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2" for="paket">Paket yang Diminati</label>
+              <select id="paket" class="input-field w-full px-4 py-3 rounded-xl text-white text-sm appearance-none">
+                <option value="" class="bg-slate-800">-- Pilih Paket Trip --</option>
+                <option value="prau" class="bg-slate-800">Fun Trekking - Gunung Prau</option>
+                <option value="merbabu" class="bg-slate-800">Summit Attack - Gunung Merbabu</option>
+                <option value="semeru" class="bg-slate-800">Ekspedisi - Gunung Semeru</option>
+                <option value="custom" class="bg-slate-800">Lainnya / Custom Trip</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2" for="pesan">Pesan</label>
+              <textarea id="pesan" rows="4" placeholder="Tuliskan pertanyaan atau keperluanmu..." required
+                class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-slate-500 text-sm resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full py-3.5 rounded-xl text-sm font-bold text-white shadow-lg">
+              <i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pesan
+            </button>
+          </form>
+          <div id="success-msg" class="hidden mt-4 bg-green-500/20 border border-green-500/40 text-green-400 text-sm text-center py-3 rounded-xl">
+            ✅ Pesan terkirim! Kami akan segera menghubungimu.
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Info Cards -->
+        <div class="flex flex-col gap-5 animate-on-scroll" style="transition-delay:0.1s">
+          <div class="mb-2">
+            <h2 class="text-2xl font-bold mb-2">Hubungi Langsung</h2>
+            <p class="text-slate-400 text-sm">Lebih suka bicara langsung? Kami ada di sini untuk kamu.</p>
+          </div>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/6281234567890?text=Halo+Zippy+Tour%2C+saya+ingin+info+open+trip" target="_blank"
+            class="contact-card card-glass rounded-2xl p-5 flex items-center gap-5 group">
+            <div class="contact-icon w-14 h-14 rounded-xl bg-green-500/20 border border-green-500/30 flex items-center justify-center flex-shrink-0">
+              <i class="fa-brands fa-whatsapp text-green-400 text-3xl"></i>
+            </div>
+            <div class="flex-1">
+              <p class="text-xs text-slate-500 mb-0.5">WhatsApp · Respon cepat</p>
+              <p class="font-bold text-white text-base">+62 812-3456-7890</p>
+              <p class="text-slate-400 text-xs mt-0.5">Senin–Sabtu, 08.00 – 20.00 WIB</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-orange-400 transition-colors"></i>
+          </a>
+
+          <!-- Telegram -->
+          <a href="https://t.me/zippytour" target="_blank"
+            class="contact-card card-glass rounded-2xl p-5 flex items-center gap-5 group">
+            <div class="contact-icon w-14 h-14 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center flex-shrink-0">
+              <i class="fa-brands fa-telegram text-sky-400 text-3xl"></i>
+            </div>
+            <div class="flex-1">
+              <p class="text-xs text-slate-500 mb-0.5">Telegram · Chat & channel update</p>
+              <p class="font-bold text-white text-base">@zippytour</p>
+              <p class="text-slate-400 text-xs mt-0.5">Info jadwal & promo terbaru</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-orange-400 transition-colors"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:hello@zippytour.id"
+            class="contact-card card-glass rounded-2xl p-5 flex items-center gap-5 group">
+            <div class="contact-icon w-14 h-14 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-envelope text-orange-400 text-2xl"></i>
+            </div>
+            <div class="flex-1">
+              <p class="text-xs text-slate-500 mb-0.5">Email · Untuk keperluan formal</p>
+              <p class="font-bold text-white text-base">hello@zippytour.id</p>
+              <p class="text-slate-400 text-xs mt-0.5">Balas dalam 1×24 jam kerja</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-orange-400 transition-colors"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/zippytour" target="_blank"
+            class="contact-card card-glass rounded-2xl p-5 flex items-center gap-5 group">
+            <div class="contact-icon w-14 h-14 rounded-xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
+              <i class="fa-brands fa-instagram text-pink-400 text-2xl"></i>
+            </div>
+            <div class="flex-1">
+              <p class="text-xs text-slate-500 mb-0.5">Instagram · Galeri petualangan</p>
+              <p class="font-bold text-white text-base">@zippytour.id</p>
+              <p class="text-slate-400 text-xs mt-0.5">Foto & video perjalanan terbaru</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-orange-400 transition-colors"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    
+    <a href="/" class="flex items-center gap-2">
+      <img src="../assets/logo.png" alt="Zippy Tour Logo" class="h-8 w-auto object-contain">
+      <span class="font-bold">Zippy<span class="text-orange-400">Tour</span></span>
+    </a>
+    
+    <p class="text-slate-500 text-xs text-center">&copy; 2025 Zippy Tour Service · Dipandu oleh ZippyTour TEAM</p>
+      <div class="flex gap-4">
+        <a href="https://wa.me/6281234567890" class="text-slate-400 hover:text-green-400 transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+        <a href="https://t.me/zippytour" class="text-slate-400 hover:text-sky-400 transition-colors"><i class="fa-brands fa-telegram text-xl"></i></a>
+        <a href="https://instagram.com/zippytour" class="text-slate-400 hover:text-pink-400 transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
+    const observer = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Mengirim...';
+      btn.disabled = true;
+      setTimeout(() => {
+        document.getElementById('success-msg').classList.remove('hidden');
+        e.target.reset();
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pesan';
+        btn.disabled = false;
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
