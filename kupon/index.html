@@ -19,8 +19,6 @@
     .nav-link-item:hover::after, .nav-link-item.active::after { width: 100%; }
     .section-tag { background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3); color: #fb923c; }
     .page-hero { background: linear-gradient(to bottom, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.78) 60%, rgba(15,23,42,1) 100%), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=80') center/cover no-repeat; }
-
-    /* === VOUCHER CARD STYLES === */
     .voucher-card {
       background: rgba(30,41,59,0.75);
       border: 1px solid rgba(249,115,22,0.2);
@@ -78,8 +76,6 @@
   </style>
 </head>
 <body class="bg-slate-900 text-white">
-
-  <!-- NAVBAR -->
   <nav class="glass fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -111,8 +107,6 @@
       </div>
     </div>
   </nav>
-
-  <!-- PAGE HERO -->
   <section class="page-hero pt-28 pb-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <span class="section-tag text-xs font-semibold px-4 py-1.5 rounded-full inline-block mb-5">🎫 Voucher Digital</span>
@@ -120,17 +114,11 @@
       <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto">Klaim voucher eksklusif dan dapatkan potongan harga spesial untuk trip impianmu.</p>
     </div>
   </section>
-
-  <!-- VOUCHERS -->
   <section class="bg-slate-900 py-16">
     <div class="max-w-5xl mx-auto px-4">
-
       <h2 class="text-2xl font-bold mb-2">Voucher Tersedia 🔥</h2>
       <p class="text-slate-400 text-sm mb-10">Klik "Klaim Kupon" untuk menyalin kode voucher dan gunakan saat booking.</p>
-
       <div class="grid md:grid-cols-2 gap-8 mb-16">
-
-        <!-- VOUCHER 1: Early Bird -->
         <div class="voucher-card animate-on-scroll shimmer">
           <div class="p-6">
             <div class="flex items-start justify-between mb-4">
@@ -141,19 +129,16 @@
               </div>
               <p class="text-4xl font-black stat-num">20%</p>
             </div>
-            <!-- Facilities -->
             <ul class="text-xs text-slate-400 space-y-1.5 mb-4">
               <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-orange-400 text-xs"></i>Berlaku untuk semua slot Gunung Prau</li>
               <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-orange-400 text-xs"></i>Tidak dapat digabung dengan promo lain</li>
               <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-orange-400 text-xs"></i>Berlaku hingga 31 Mei 2026</li>
             </ul>
-            <!-- Countdown -->
             <div class="flex items-center gap-2 text-xs text-slate-500 mb-4">
               <i class="fa-solid fa-clock text-orange-400"></i>
               <span>Berakhir dalam: <span class="countdown text-orange-300 font-semibold" id="cd1">--:--:--</span></span>
             </div>
           </div>
-          <!-- Dashed divider + code -->
           <div class="voucher-dashed mx-4 mb-5"></div>
           <div class="px-6 pb-6">
             <p class="text-xs text-slate-500 mb-2">Kode Voucher:</p>
@@ -167,8 +152,6 @@
             </div>
           </div>
         </div>
-
-        <!-- VOUCHER 2: Grup -->
         <div class="voucher-card animate-on-scroll shimmer" style="transition-delay:0.1s">
           <div class="p-6">
             <div class="flex items-start justify-between mb-4">
@@ -202,8 +185,6 @@
             </div>
           </div>
         </div>
-
-        <!-- VOUCHER 3: Weekend Flash -->
         <div class="voucher-card animate-on-scroll shimmer" style="transition-delay:0.15s">
           <div class="p-6">
             <div class="flex items-start justify-between mb-4">
@@ -237,8 +218,6 @@
             </div>
           </div>
         </div>
-
-        <!-- VOUCHER 4: EXPIRED -->
         <div class="voucher-card voucher-expired animate-on-scroll" style="transition-delay:0.2s">
           <div class="p-6">
             <div class="flex items-start justify-between mb-4">
@@ -268,10 +247,7 @@
             </div>
           </div>
         </div>
-
       </div>
-
-      <!-- How to use -->
       <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 animate-on-scroll">
         <h3 class="text-xl font-bold mb-6 text-center">📋 Cara Menggunakan Voucher</h3>
         <div class="grid sm:grid-cols-3 gap-6">
@@ -305,8 +281,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
   <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-6">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <a href="/" class="flex items-center gap-2">
@@ -321,17 +295,13 @@
       </div>
     </div>
   </footer>
-
-  <!-- Toast notification -->
   <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-2xl flex items-center gap-2 z-50 transition-all duration-300 opacity-0 pointer-events-none">
     <i class="fa-solid fa-circle-check"></i><span id="toast-msg">Kode disalin!</span>
   </div>
-
   <script>
     document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
     const observer = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-
     function claimVoucher(btn, code) {
       navigator.clipboard.writeText(code).catch(() => {});
       btn.innerHTML = '<i class="fa-solid fa-check mr-1.5"></i>Disalin!';
@@ -342,7 +312,6 @@
         btn.classList.remove('btn-claim-done');
       }, 3000);
     }
-
     function showToast(msg) {
       const toast = document.getElementById('toast');
       document.getElementById('toast-msg').textContent = msg;
@@ -350,8 +319,6 @@
       toast.classList.add('opacity-100');
       setTimeout(() => { toast.classList.add('opacity-0', 'pointer-events-none'); toast.classList.remove('opacity-100'); }, 3000);
     }
-
-    // Countdown timers
     function countdown(endDate, elemId) {
       function update() {
         const diff = new Date(endDate) - new Date();
