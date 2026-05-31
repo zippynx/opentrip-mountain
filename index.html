@@ -71,34 +71,27 @@
   </style>
 </head>
 <body class="bg-slate-900 text-white">
-
-  <!-- ===== NAVBAR ===== -->
   <nav class="glass fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
         <a href="/" class="flex items-center gap-2 group">
           <img src="../assets/logo.png" alt="Zippy Tour Logo" class="h-9 w-auto object-contain">
           <span class="font-bold text-lg tracking-tight">Zippy<span class="text-orange-400">Tour</span></span>
         </a>
-        <!-- Desktop Links -->
         <div class="hidden md:flex items-center gap-8">
           <a href="/" class="nav-link-item active text-sm font-medium text-orange-400">Beranda</a>
           <a href="/paket" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Paket Trip</a>
           <a href="/contact" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Kontak</a>
           <a href="/kupon" class="nav-link-item text-sm font-medium text-slate-300 hover:text-white">Kupon</a>
         </div>
-        <!-- CTA -->
         <div class="hidden md:flex items-center gap-3">
           <a href="/paket" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white shadow-lg">Lihat Jadwal</a>
         </div>
-        <!-- Hamburger -->
         <button id="hamburger" class="md:hidden text-slate-300 focus:outline-none" aria-label="Menu">
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
     </div>
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden px-4 pb-4 pt-2 border-t border-slate-700/50">
       <div class="flex flex-col gap-3">
         <a href="/" class="text-sm font-medium text-orange-400 py-2">Beranda</a>
@@ -109,14 +102,10 @@
       </div>
     </div>
   </nav>
-
-  <!-- ===== HERO ===== -->
   <section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
-    <!-- Floating particles -->
     <div class="absolute top-20 left-10 w-2 h-2 rounded-full bg-orange-400 opacity-60 animate-bounce-slow"></div>
     <div class="absolute top-40 right-20 w-1.5 h-1.5 rounded-full bg-amber-300 opacity-40 animate-bounce-slow" style="animation-delay:0.8s"></div>
     <div class="absolute bottom-40 left-1/4 w-1 h-1 rounded-full bg-orange-300 opacity-50 animate-bounce-slow" style="animation-delay:1.4s"></div>
-
     <div class="max-w-5xl mx-auto px-4 text-center pt-24 pb-20">
       <span class="inline-block section-tag text-xs font-semibold px-4 py-1.5 rounded-full mb-6 animate-fade-in">🏔️ Open Trip Gunung Premium Indonesia</span>
       <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mb-6 animate-fade-up">
@@ -134,16 +123,12 @@
           <i class="fa-brands fa-whatsapp text-green-400"></i>Konsultasi Gratis
         </a>
       </div>
-
-      <!-- Scroll hint -->
       <div class="mt-16 flex flex-col items-center gap-2 opacity-60 animate-bounce-slow">
         <span class="text-xs text-slate-400">Scroll ke bawah</span>
         <i class="fa-solid fa-chevron-down text-orange-400 text-sm"></i>
       </div>
     </div>
   </section>
-
-  <!-- ===== STATS ===== -->
   <section class="bg-slate-900 py-10">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -166,15 +151,11 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== ABOUT / PROFILE ===== -->
   <section class="bg-slate-900 py-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Visual side -->
         <div class="flex justify-center animate-on-scroll">
           <div class="relative">
-            <!-- Mountain silhouette illustration -->
             <div class="w-72 h-72 rounded-3xl bg-gradient-to-br from-slate-800 to-slate-700 border border-orange-500/20 flex items-center justify-center shadow-2xl overflow-hidden">
               <svg viewBox="0 0 300 300" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -192,29 +173,20 @@
                   </linearGradient>
                 </defs>
                 <rect width="300" height="300" fill="url(#skyGrad)"/>
-                <!-- Sun -->
                 <circle cx="150" cy="110" r="32" fill="url(#sunGrad)" opacity="0.9"/>
                 <circle cx="150" cy="110" r="44" fill="url(#sunGrad)" opacity="0.15"/>
-                <!-- Mountain back -->
                 <polygon points="40,220 150,70 260,220" fill="#1e293b" opacity="0.7"/>
-                <!-- Mountain main -->
                 <polygon points="10,270 120,100 230,270" fill="url(#mountGrad)"/>
-                <!-- Snow cap -->
                 <polygon points="120,100 108,138 132,138" fill="white" opacity="0.7"/>
-                <!-- Mountain right -->
                 <polygon points="130,270 220,130 310,270" fill="url(#mountGrad)" opacity="0.85"/>
-                <!-- Snow right -->
                 <polygon points="220,130 210,160 230,160" fill="white" opacity="0.5"/>
-                <!-- Hiker silhouette -->
                 <circle cx="152" cy="196" r="6" fill="#f97316"/>
                 <line x1="152" y1="202" x2="152" y2="225" stroke="#f97316" stroke-width="2.5"/>
                 <line x1="152" y1="210" x2="142" y2="220" stroke="#f97316" stroke-width="2"/>
                 <line x1="152" y1="210" x2="162" y2="220" stroke="#f97316" stroke-width="2"/>
                 <line x1="152" y1="225" x2="145" y2="238" stroke="#f97316" stroke-width="2.5"/>
                 <line x1="152" y1="225" x2="159" y2="238" stroke="#f97316" stroke-width="2.5"/>
-                <!-- Trekking pole -->
                 <line x1="162" y1="218" x2="170" y2="240" stroke="#f97316" stroke-width="2" opacity="0.8"/>
-                <!-- Stars -->
                 <circle cx="50" cy="40" r="1.5" fill="white" opacity="0.6"/>
                 <circle cx="80" cy="25" r="1" fill="white" opacity="0.5"/>
                 <circle cx="230" cy="35" r="1.5" fill="white" opacity="0.7"/>
@@ -222,13 +194,11 @@
                 <circle cx="30" cy="70" r="1" fill="white" opacity="0.5"/>
               </svg>
             </div>
-            <!-- Badge floating -->
             <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-orange-500 to-amber-400 rounded-2xl px-4 py-2 shadow-xl">
               <p class="text-white text-xs font-bold">⭐ Guide Bersertifikat</p>
             </div>
           </div>
         </div>
-        <!-- Text side -->
         <div class="animate-on-scroll">
           <span class="section-tag text-xs font-semibold px-4 py-1.5 rounded-full">Tentang Kami</span>
           <h2 class="text-3xl md:text-4xl font-black mt-5 mb-5 leading-tight">Zippy Tour Service.<br><span class="stat-num">Berpengalaman, Terpercaya.</span></h2>
@@ -248,15 +218,12 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== SERVICES ===== -->
   <section class="bg-slate-800/40 py-20">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <span class="section-tag text-xs font-semibold px-4 py-1.5 rounded-full">Layanan Kami</span>
       <h2 class="text-3xl md:text-4xl font-black mt-5 mb-4">Mengapa Pilih <span class="stat-num">Zippy Tour?</span></h2>
       <p class="text-slate-400 max-w-2xl mx-auto mb-14">Kami hadir untuk memastikan setiap pendakianmu berkesan, aman, dan penuh kenangan tak terlupakan.</p>
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
         <div class="card-glass rounded-2xl p-8 text-left animate-on-scroll">
           <div class="w-14 h-14 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mb-6">
             <i class="fa-solid fa-compass text-orange-400 text-2xl"></i>
@@ -264,7 +231,6 @@
           <h3 class="text-xl font-bold mb-3">Guide Profesional</h3>
           <p class="text-slate-400 leading-relaxed text-sm">Guide bersertifikat BNSP yang berpengalaman. Kami memastikan keamanan dan kenyamanan setiap langkah pendakianmu.</p>
         </div>
-        <!-- Card 2 -->
         <div class="card-glass rounded-2xl p-8 text-left animate-on-scroll" style="transition-delay:0.1s">
           <div class="w-14 h-14 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mb-6">
             <i class="fa-solid fa-backpack text-orange-400 text-2xl"></i>
@@ -272,7 +238,6 @@
           <h3 class="text-xl font-bold mb-3">Fasilitas Lengkap</h3>
           <p class="text-slate-400 leading-relaxed text-sm">Tenda, sleeping bag, logistik, hingga porter sudah kami siapkan. Kamu hanya perlu datang dan menikmati perjalanan.</p>
         </div>
-        <!-- Card 3 -->
         <div class="card-glass rounded-2xl p-8 text-left animate-on-scroll" style="transition-delay:0.2s">
           <div class="w-14 h-14 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mb-6">
             <i class="fa-solid fa-camera-retro text-orange-400 text-2xl"></i>
@@ -283,8 +248,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== CTA BANNER ===== -->
   <section class="py-20 bg-slate-900">
     <div class="max-w-4xl mx-auto px-4 text-center animate-on-scroll">
       <div class="relative bg-gradient-to-r from-orange-600/20 to-amber-600/10 border border-orange-500/30 rounded-3xl p-12 overflow-hidden">
@@ -300,8 +263,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer class="bg-slate-950 border-t border-slate-800 py-12">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-8 mb-10">
@@ -343,12 +304,10 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-    // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
     }, { threshold: 0.15 });
