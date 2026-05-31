@@ -1,4 +1,4 @@
-# Zippy Tour Service - Open Trip Gunung Premium 🏔️
+# Zippy Tour Service - Open Trip Gunung Premium 
 
 Landing page modern dan responsif untuk penyedia layanan *open trip* gunung profesional. Website ini dirancang untuk memberikan informasi paket perjalanan, fasilitas, dan keunggulan layanan dengan antarmuka yang menarik.
 
@@ -20,3 +20,17 @@ Proyek ini berjalan murni di sisi *client* (Front-End) dan menggunakan CDN untuk
 1. *Clone repository* ini ke komputermu:
    ```bash
    git clone [https://github.com/ZippyNx/nama-repo-kamu.git](https://github.com/ZippyNx/nama-repo-kamu.git)
+
+## Live Demo
+
+```bash
+https://zippynx.github.io/opentrip-mountain/
+```
+
+---
+
+## Author
+
+Designed and developed by Zippynx
+
+--- 
